@@ -1,0 +1,48 @@
+﻿@using Schoolchallenge.Model.ViewModels
+@{
+    ViewBag.Title = "Index";
+}
+
+<h5>Asssign Students</h5>
+<script>
+    $(document).ready(function () {
+        $('#SelectTeacher').on('change', function () {
+            $("#studentDetails tbody").html('');
+            if ($('#SelectTeacher').val() > 0) {
+                Student.getAssignStudents($('#SelectTeacher').val());
+            }
+        });
+    });
+</script>
+<div class="form-group">
+    <div class="col-md-5">
+        @Html.DropDownList("SelectTeacher",
+                     new SelectList((IEnumerable<TeacherViewModel>)ViewBag.Techers, "TeacherId", "FirstName"),
+                     "Select Teacher",
+                     new { @class = "form-control" })
+        <br />
+    </div>
+</div>
+<table class="table table-bordered table-hover" id="studentDetails">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                Number
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Has Scholarship
+            </th>            
+        </tr>
+    </thead>
+    <tbody class="tbody"></tbody>    
+</table>
+<div>
+    <button type="button" class="btn btn-primary" id="btnUpdate" onclick="Students.updateAssignedStudents();">Update</button>
+</div>

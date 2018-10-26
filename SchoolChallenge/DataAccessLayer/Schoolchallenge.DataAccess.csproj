@@ -47,13 +47,12 @@
   <ItemGroup>
     <Compile Include="DALContext.cs" />
     <Compile Include="DLStudents.cs" />
+    <Compile Include="DLTeachers.cs" />
+    <Compile Include="Interfaces\IDALStudent.cs" />
+    <Compile Include="Interfaces\IDALTeacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SchoolChallenge.Common\SchoolChallenge.Common.csproj">
-      <Project>{568be2c6-0d51-4168-81c4-7d9814cbd8f7}</Project>
-      <Name>SchoolChallenge.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Schoolchallenge.Model\Schoolchallenge.Model.csproj">
       <Project>{cf07e3bb-e5dc-4c37-b35c-c03794ab0812}</Project>
       <Name>Schoolchallenge.Model</Name>

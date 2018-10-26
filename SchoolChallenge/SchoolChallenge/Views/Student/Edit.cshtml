@@ -1,0 +1,38 @@
+﻿@using Schoolchallenge.Model.ViewModels
+@model StudentViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+@{
+    Layout = null;
+}
+<h2>Edit</h2>
+
+<div>
+    <div>
+        @Html.LabelFor(m => m.StudentId)
+        @Html.TextBoxFor(m => m.StudentId)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Number)
+        @Html.TextBoxFor(m => m.Number)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.HasScholarship)
+        @Html.TextBoxFor(m => m.HasScholarship)
+    </div>
+    <div>
+        
+    </div>
+</div>
+
+

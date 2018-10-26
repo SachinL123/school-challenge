@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <h2>Teacher List</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-lg-9">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#teacherModal" onclick="Teacher.clearForm();"> <span class="glyphicon glyphicon-plus-sign"></span> Add New Teacher</button>
+        </div>
+        <div class="col-lg-3 offset-2">
+            <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#teacherUploadModal" onclick="Teacher.clearUploadedFile();"> <span class="glyphicon glyphicon-cloud-upload"></span> Import Teachers</button>
+        </div>
+
+    </div>
+
+    <hr />
+    <div class="row">
+        <table id="teacherDetails" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Students
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="modal fade" id="teacherUploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModallabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="teacherModalLabel">Import Teachers</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input type="file" id="txtUploadTeachers" name="file" required />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <button type="button" class="btn btn-danger btn-sm" onclick="Teacher.clearUploadedFile();"> <span class="glyphicon glyphicon-remove-sign"></span> Clear</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="uploadTeachers"> <span class="glyphoicon glyphicon glyphicon-import"></span> Import</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="teacherModal" tabindex="-1" role="dialog" aria-labelledby="teacherModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="teacherModalLabel">Add teacher</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="d-none">
+                        <label for="teacherId">ID</label>
+                        <input type="text" class="form-control" id="teacherId" placeholder="ID" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" class="form-control" id="FirstName" placeholder="First Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" class="form-control" id="LastName" placeholder="Last Name" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnAdd" onclick="Teacher.add();">Add</button>
+                <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="Teacher.update();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        Teacher.getAll();
+        Teacher.Import();
+    });
+</script>
+

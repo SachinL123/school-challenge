@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolChallenge.Business", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schoolchallenge.Model", "Schoolchallenge.Model\Schoolchallenge.Model.csproj", "{CF07E3BB-E5DC-4C37-B35C-C03794AB0812}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolChallenge.Common", "SchoolChallenge.Common\SchoolChallenge.Common.csproj", "{568BE2C6-0D51-4168-81C4-7D9814CBD8F7}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{840AF5F4-438D-4CA6-A146-9A6657A8C042}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migration", "Migration", "{32F08BF9-1893-4666-A9B1-8049884E5A65}"
@@ -43,10 +41,6 @@ Global
 		{CF07E3BB-E5DC-4C37-B35C-C03794AB0812}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF07E3BB-E5DC-4C37-B35C-C03794AB0812}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF07E3BB-E5DC-4C37-B35C-C03794AB0812}.Release|Any CPU.Build.0 = Release|Any CPU
-		{568BE2C6-0D51-4168-81C4-7D9814CBD8F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{568BE2C6-0D51-4168-81C4-7D9814CBD8F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{568BE2C6-0D51-4168-81C4-7D9814CBD8F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{568BE2C6-0D51-4168-81C4-7D9814CBD8F7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{885A7361-0066-4FE8-922D-10737ABE38F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{885A7361-0066-4FE8-922D-10737ABE38F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{885A7361-0066-4FE8-922D-10737ABE38F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,5 +56,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{885A7361-0066-4FE8-922D-10737ABE38F5} = {32F08BF9-1893-4666-A9B1-8049884E5A65}
 		{A9ECD777-ADA6-4BD1-B592-8E8F5EF0D0E8} = {840AF5F4-438D-4CA6-A146-9A6657A8C042}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {972EE77D-30F2-4665-A72D-387D07CB271B}
 	EndGlobalSection
 EndGlobal
